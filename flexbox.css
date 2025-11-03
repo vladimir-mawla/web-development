@@ -1,0 +1,56 @@
+/* Flexbox default direction is row */
+
+/* flexbox has 2 axes */
+/* Main axis = direction elements flow (row or column) || justify-content */
+/* Cross axis = the perpendicular direction || align-items */
+
+/* justify-content: flex-start, flex-end, center, space-between, space-around */
+/* align-items: flex-start, center, flex-end, stretch  */
+
+
+/* Flex by default keeps items in one line */
+
+
+
+.container {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    padding: 10px;
+    gap: 10px;
+}
+
+/* flex-grow, shrink, basis */
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: turquoise;
+    margin: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+/* 5th-child(5) */
+.box:nth-child(1) {
+    flex-grow: 1;
+    /* flex-basis: 350px; */
+    background: rgb(69, 69, 154);
+    /* flex-basis: 100px; */
+    
+}
+
+.box:nth-child(2) {
+    flex-grow: 2;
+    background: rgb(177, 32, 32);
+}
+
+.box:nth-child(3) {
+    flex-grow: 3;
+    background: rgb(187, 187, 104);
+}
