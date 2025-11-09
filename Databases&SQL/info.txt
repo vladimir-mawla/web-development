@@ -1,0 +1,70 @@
+Database: is an organized collection of data stored electronically
+
+Database Components:
+1. Database: The full collection of data
+2. Tables: A group of related data ex: students
+3. Row/Record: One entry in the table ex: student_1
+4. Column/Field: A property of the data  ex: name/email/ID
+5. Primary Key (PK): Unique identifier per row
+6. Foreign Key (FK): Links two tables.  ex: student_id in grades table
+
+
+
+students table:
+-----------------
+Id (PK) |   name    |  phone_number (optional)
+1       |   Alaa    |     123
+2       |   Khalil  |     NULL
+3       |   John    |     12111
+
+grades table:
+-----------------
+Id (PK) |  grade  | student_id (FK)
+6       |   10    |     1
+9       |   9     |     2
+
+
+Why use databases:
+1. Fast data retrieval
+2. Consistnet structure
+3. Secure storage
+
+
+
+
+
+SQL Categories:
+(Data Definition Language)   DDL   (CREATE, ALTER, DROP) -> Table level
+(Data Manipulation Language) DML   (INSERT, UPDATE, DELETE) -> Row level
+(Data Query Language)        DQL   (SELECT)
+(Data Control Language)      DCL   (GRANT, REVOKE)
+
+
+SELECT * FROM students;
+SELECT * FROM students WHERE grade = 10;
+
+
+Create table students (
+  id INTEGER Primary key AUTOINCREMENT,
+  name VARCHAR,
+  grade VARCHAR
+)
+
+INSERT into students (name, grade)
+values ('John2', 80),
+		('Joe2', 55),
+        ('John3', 67),
+        ('Joe3', 79)
+
+Select count(*) from students;
+
+
+Select * from students where grade > 50 order by grade asc;
+
+Select * from students where grade > 50 order by grade desc;
+
+Update students set name = 'Joe2' where name = 'Joe'
+
+Update students set grade = 56 where name = 'Joe2'
+
+Select count(*) from students;
